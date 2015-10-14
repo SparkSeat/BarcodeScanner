@@ -112,6 +112,8 @@ public class BarcodeScanner extends CordovaPlugin {
         Intent intentScan = new Intent(SCAN_INTENT);
         intentScan.addCategory(Intent.CATEGORY_DEFAULT);
 
+        intentScan.putExtra("RESULT_DISPLAY_DURATION_MS", 0L);
+
         // add config as intent extras
         if(args.length() > 0) {
 
